@@ -2,7 +2,7 @@
 = Security
 
 [#104]
-== {MUST} Secure Endpoints with OAuth 2.0
+== {SHOULD} Secure Endpoints with OAuth 2.0
 
 Every API endpoint needs to be secured using OAuth 2.0. Please refer to
 the
@@ -18,7 +18,7 @@ components:
       type: oauth2
       flows:
         clientCredentials:
-          tokenUrl: https://identity.zalando.com/oauth2/token
+          tokenUrl: https://identity.pixeon.com/oauth2/token
           scopes:
             fulfillment-order-service.read: Access right needed to read from the fulfillment order service.
             fulfillment-order-service.write: Access right needed to write to the fulfillment order service.

@@ -1,4 +1,4 @@
-:stylesheet: zalando.css
+:stylesheet: pixeon.css
 :source-highlighter: coderay
 :toc: macro
 :toclevels: 2
@@ -6,9 +6,9 @@
 :sectlinks:
 :sectnumlevels: 1
 
-:creator: Zalando SE
+:creator: Pixeon
 :producer: Asciidoctor
-:keywords: Zalando, Guidelines, RESTful, API, Events, Schema
+:keywords: Pixeon, Guidelines, RESTful, API, Events, Schema
 :copyright: CC-BY-SA 3.0
 
 
@@ -37,7 +37,7 @@
 :ISO-639-1: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 :ISO-4217: https://en.wikipedia.org/wiki/ISO_4217
 
-:SRE-Tracing: https://github.bus.zalan.do/SRE/opentracing
+// :SRE-Tracing: https://github.bus.zalan.do/SRE/opentracing
 
 // Attribute to improve design of key words in titles.
 :MUST: pass:[<span class="must-keyword"><strong>Must</strong></span>:]
@@ -151,12 +151,11 @@
 :RFC-cacheable: pass:[<a href="https://tools.ietf.org/html/rfc7231#section-4.2.3">cacheable</a>]
 
 
-= Zalando RESTful API and Event Scheme Guidelines
-Zalando SE
+= Pixeon RESTful API and Event Scheme Guidelines
 
-image::assets/api-zalando-small.jpg[API Guild Logo]
+image::assets/api-pixeon-small.jpg[API Guild Logo]
 
-Other formats: link:zalando-guidelines.pdf[PDF], link:zalando-guidelines.epub[EPUB3]
+Other formats: link:pixeon-guidelines.pdf[PDF], link:pixeon-guidelines.epub[EPUB3]
 
 toc::[]
 
