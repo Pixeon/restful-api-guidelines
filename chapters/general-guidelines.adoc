@@ -10,12 +10,7 @@ The titles are marked with the corresponding labels: {MUST},
 You must follow the <<api-first, API First Principle>>, more specifically: 
 
 * You must define APIs first, before coding its implementation, <<101, using OpenAPI as specification language>>
-* You must design your APIs consistently with this guidelines; 
-use our https://zally.zalando.net/[API Linter Service [internal link]] for automated rule checks. 
-* You must call for early review feedback from peers and client developers, 
-and apply https://github.bus.zalan.do/ApiGuild/ApiReviewProcedure[our lightweight API
-review process [internal link]] for all component external APIs, i.e. 
-all apis with `x-api-audience =/= component-internal` (see <<219, API Audience>>). 
+* You must design your APIs consistently with this guidelines;
 
 
 [#101]
@@ -32,23 +27,20 @@ code management system - best together with the implementing sources.
 
 You <<192, must / should publish>> the component <<219, external / internal>>
 API specification with the deployment of the implementing service, and, hence,
-make it discoverable for the group via our https://apis.zalando.net/[API Portal
-[internal link]].
+make it discoverable for the group.
 
 *Hint:* A good way to explore *OpenAPI 3.0/2.0* is to navigate through the
 https://openapi-map.apihandyman.io/[OpenAPI specification mind map] and use
 our https://plugins.jetbrains.com/search?search=swagger+Monte[Swagger Plugin
 for IntelliJ IDEA] to create your first API. To explore and validate/evaluate
-existing APIs the https://editor.swagger.io/[Swagger Editor] or our
-https://apis.zalando.net[API Portal] may be a good starting point.
+existing APIs the https://editor.swagger.io/[Swagger Editor].
 
 
 [#234]
 == {MUST} only use Durable and Immutable Remote References
 
 Normally, API specification files must be *self-contained*, i.e. files
-should not contain references to local or remote content, e.g. `../fragment.yaml#/element` or
-`$ref: 'https://github.com/zalando/zally/blob/master/server/src/main/resources/api/zally-api.yaml#/schemas/LintingRequest'`.
+should not contain references to local or remote content, e.g. `../fragment.yaml#/element`.
 The reason is, that the content referred to is _in general_ *not durable* and
 *not immutable*. As a consequence, the semantic of an API may change in
 unexpected ways.

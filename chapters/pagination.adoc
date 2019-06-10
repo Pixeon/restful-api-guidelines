@@ -2,7 +2,7 @@
 = Pagination
 
 [#159]
-== {MUST} Support Pagination
+== {SHOULD} Support Pagination
 
 Access to lists of data items must support pagination to protect the service
 against overload as well as for best client side iteration and batch processing

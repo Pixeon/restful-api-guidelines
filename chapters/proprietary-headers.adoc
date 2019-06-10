@@ -9,7 +9,7 @@ explicitly visible. Use the parameter definitions of the resource HTTP
 methods.
 
 [#183]
-== {MUST} Use Only the Specified Proprietary Zalando Headers
+== {MUST} Use Only the Specified Proprietary Pixeon Headers
 
 As a general rule, proprietary HTTP headers should be avoided. Still
 they can be useful in cases where context needs to be passed through
@@ -49,17 +49,15 @@ For more information see <<233>>.
 
 |[[x-tenant-id]]{X-Tenant-ID}|String|
 Identifies the tenant initiated the request
-to the multi tenant Zalando Platform. The {X-Tenant-ID} must be set 
+to the multi tenant Pixeon Platform. The {X-Tenant-ID} must be set 
 according to the Business Partner ID extracted from the OAuth token when 
-a request from a Business Partner hits the Zalando Platform. 
+a request from a Business Partner hits the Pixeon Platform. 
 |9f8b3ca3-4be5-436c-a847-9cd55460c495
 
 |[[x-sales-channel]]{X-Sales-Channel}|String|
 Sales channels are owned by retailers and represent a specific consumer segment
 being addressed with a specific product assortment that is offered via CFA
-retailer catalogs to consumers (see
-https://pages.github.bus.zalan.do/core-platform/docs/glossary/glossary.html[platform
-glossary (internal link)])
+retailer catalogs to consumers
 |52b96501-0f8d-43e7-82aa-8a96fab134d7
 
 |[[c-frontend-type]]{X-Frontend-Type}|String|
@@ -108,7 +106,7 @@ hop-by-hop `X-RateLimit-` headers which can be used as defined in <<153>>.
 [#184]
 == {MUST} Propagate Proprietary Headers
 
-All Zalando's proprietary headers are end-to-end headers.
+All Pixeon proprietary headers are end-to-end headers.
 footnoteref:[header-types, HTTP/1.1 standard ({RFC-7230}#section-6.1[RFC 7230])
 defines two types of headers: end-to-end and hop-by-hop headers. End-to-end
 headers must be transmitted to the ultimate recipient of a request or response.
@@ -130,7 +128,7 @@ propagated as headers with the subsequent request, despite the duplication of
 information.
 
 [#233]
-== {MUST} Use `X-Flow-ID`
+== {SHOULD} Use `X-Flow-ID`
 
 The *Flow-Id* is a generic parameter to be passed through service APIs and
 events and written into log files and traces. A consequent usage of the

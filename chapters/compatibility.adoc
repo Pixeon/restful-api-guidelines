@@ -144,7 +144,7 @@ Maps (see <<216>>), even though technically objects, are also forbidden as top
 level data structures, since they don't support compatible, future extensions.
 
 [#111]
-== {MUST} Treat Open API Definitions As Open For Extension By Default
+== {SHOULD} Treat Open API Definitions As Open For Extension By Default
 
 The Open API 2.0 specification is not very specific on default
 extensibility of objects, and redefines JSON-Schema keywords related to
@@ -230,7 +230,7 @@ we strongly recommend to only use the first two approaches.
 
 
 [#114]
-== {MUST} Use Media Type Versioning
+== {SHOULD} Use Media Type Versioning
 
 However, when API versioning is unavoidable, you have to design your
 multi-version RESTful APIs using media type versioning (instead of URI
@@ -240,7 +240,7 @@ management.
 
 Media type versioning: Here, version information and media type are provided
 together via the HTTP Content-Type header — e.g.
-`application/x.zalando.cart+json;version=2`. For incompatible changes, a new
+`application/x.pixeon.study+json;version=2`. For incompatible changes, a new
 media type version for the resource is created. To generate the new
 representation version, consumer and producer can do content negotiation using
 the HTTP Content-Type and Accept headers. Note: This versioning only applies to
@@ -250,7 +250,7 @@ In this example, a client wants only the new version of the response:
 
 [source,http]
 ----
-Accept: application/x.zalando.cart+json;version=2
+Accept: application/x.pixeon.study+json;version=2
 ----
 
 A server responding to this, as well as a client sending a request with content
@@ -259,7 +259,7 @@ version:
 
 [source,http]
 ----
-Content-Type: application/x.zalando.cart+json;version=2
+Content-Type: application/x.pixeon.study+json;version=2
 ----
 
 Using header versioning should:
